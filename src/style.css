@@ -340,6 +340,7 @@ button:hover {
   flex-direction: column;
   display: none;
   transition: 0.6s;
+  border-radius: 5px;
 }
 
 .icons i {
