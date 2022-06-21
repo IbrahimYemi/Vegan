@@ -15,7 +15,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="app-body">
       <Header />
       <Body />
       <div className="order-button">

@@ -6,6 +6,11 @@ body {
   color: #ffffff;
 }
 
+.app-body {
+  display: flex;
+  flex-direction: column;
+}
+
 input,
 button,
 textarea,
@@ -175,7 +180,11 @@ select {
 
 .order-food {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.order-food > * {
+  flex: 1 1 30%;
 }
 
 .rate-us {
@@ -351,15 +360,19 @@ button:hover {
   margin: auto;
   background: #172147;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 20px;
   border-radius: 15px;
 }
 
-.newsletter > * {
-  flex: 1 1 50%;
-  margin: auto;
-  align-items: center;
+.subscribe-words {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.subscribe-words h2 {
+  line-height: 30px;
 }
 
 .advice-health {
