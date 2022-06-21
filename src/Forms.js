@@ -62,7 +62,7 @@ export default function Forms() {
     // Email = data.email;
   }
 
-  const render1 = (
+  const render2 = (
     <div className="formsubmit">
       <p style={{ color: 'red', fontSize: '20px' }}>FOR UI RENDERING</p>
       <h3>
@@ -78,6 +78,12 @@ export default function Forms() {
         Will you like to be reminded:{' '}
         {data.isFoodtime ? 'Yes please remind me' : "No, thanks. I'm alright"}
       </p>
+    </div>
+  );
+
+  const render1 = (
+    <div className="formsubmit">
+      <p style={{ color: 'red', fontSize: '20px' }}>YOUR ORDERS HERE</p>
     </div>
   );
 
@@ -268,7 +274,7 @@ export default function Forms() {
       </form>
       <br />
       <br />
-      {data.isShowOutput && render1}
+      {data.isShowOutput ? render2 : render1}
     </div>
   );
 }
