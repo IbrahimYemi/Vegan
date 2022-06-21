@@ -2,17 +2,17 @@ import React from 'react';
 
 export default function Forms() {
   const [data, setData] = React.useState({
-    firstName: 'Please fill',
+    firstName: '',
     lastName: '',
-    gender: 'Please fill',
-    feedback: 'Please fill',
+    gender: '',
+    feedback: '',
     swallow: 'Please choose',
     soup: '',
     accessories: '',
     age: 1,
     isFoodtime: false,
     isShowOutput: false,
-    email: 'Please fill',
+    email: '',
   });
 
   const times = new Date().getHours();
@@ -83,7 +83,9 @@ export default function Forms() {
 
   const render1 = (
     <div className="formsubmit">
-      <p style={{ color: 'red', fontSize: '20px' }}>YOUR ORDERS HERE</p>
+      <p style={{ color: 'red', fontSize: '20px', textAlign: 'center' }}>
+        YOUR ORDERS HERE
+      </p>
     </div>
   );
 

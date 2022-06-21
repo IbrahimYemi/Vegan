@@ -16,8 +16,8 @@ export default function App() {
 
   return (
     <div className="app-body">
-      <Header />
-      <Body />
+      {/* <Header />
+      <Body /> */}
       <div className="order-button">
         <button className="button" onClick={handleChange}>
           {show ? 'ENJOY' : 'ORDER'}

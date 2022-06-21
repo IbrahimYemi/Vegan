@@ -247,7 +247,6 @@ button:hover {
   margin: 10px 20px;
   padding: 20px;
   color: #000a00;
-  overflow-x: scroll;
 }
 
 .order-button {
