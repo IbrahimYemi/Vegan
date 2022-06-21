@@ -2,17 +2,17 @@ import React from 'react';
 
 export default function Forms() {
   const [data, setData] = React.useState({
-    firstName: '',
+    firstName: 'Please fill',
     lastName: '',
-    gender: '',
-    feedback: '',
-    swallow: '',
+    gender: 'Please fill',
+    feedback: 'Please fill',
+    swallow: 'Please choose',
     soup: '',
     accessories: '',
-    age: 0,
+    age: 1,
     isFoodtime: false,
     isShowOutput: false,
-    email: '',
+    email: 'Please fill',
   });
 
   const times = new Date().getHours();
@@ -43,7 +43,7 @@ export default function Forms() {
   let Swallow = '';
   let Soup = '';
   let Accessories = '';
-  let Age = 0;
+  let Age = 1;
   let IsFoodtime = true;
   let Email = '';
 
@@ -62,37 +62,22 @@ export default function Forms() {
     // Email = data.email;
   }
 
-  const render2 = (
+  const render1 = (
     <div className="formsubmit">
       <p style={{ color: 'red', fontSize: '20px' }}>FOR UI RENDERING</p>
       <h3>
-        My name is {data.firstName} {data.lastName} and i'm {data.age} years old
+        NAME: {data.firstName} {data.lastName}
       </h3>
-      <h3>contact me on {data.email}</h3>
-      <h3>my feedback: {data.feedback}</h3>
-      <h3>
-        I want {data.swallow} with {data.soup} soup mixed with good{' '}
-        {data.accessories}, thanks!
-      </h3>
-      <h3>
-        {data.isFoodtime ? 'Yes please remind me' : "No, thanks. I'm alright"}
-      </h3>
-    </div>
-  );
-
-  const render3 = (
-    <div className="formsubmit">
-      <p style={{ color: 'red', fontSize: '20px', textAlign: 'center' }}>
-        PLEASE FILL OUT YOUR OTHER
+      <p>Age: {data.age}</p>
+      <p>Email: {data.email}</p>
+      <p>Feedback: {data.feedback}</p>
+      <p>
+        ORDERS: {data.swallow} {data.soup} {data.accessories}, thanks!
       </p>
-    </div>
-  );
-
-  const render1 = (
-    <div className="formsubmit">
-      {FirstName == FirstName && Swallow == Swallow && Feedback == Feedback
-        ? render3
-        : render2}
+      <p>
+        Will you like to be reminded:{' '}
+        {data.isFoodtime ? 'Yes please remind me' : "No, thanks. I'm alright"}
+      </p>
     </div>
   );
 
